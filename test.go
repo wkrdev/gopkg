@@ -85,6 +85,9 @@ func dbmsTest() {
 		}
 		fmt.Println(dbName)
 	}
+	if err := rows.Err(); err != nil {
+		fmt.Println("error", err)
+	}
 	// dbms cache
 	fmt.Println("- dbms cache -")
 	var inCache, outCache JwtClaims
